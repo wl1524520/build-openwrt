@@ -14,8 +14,7 @@ PK_THEME="luci-theme-netgear luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn"
 PK_ADD="smartdns luci-app-smartdns luci-i18n-arpbind-zh-cn luci-i18n-autoreboot-zh-cn luci-i18n-ramfree-zh-cn luci-i18n-upnp-zh-cn"
 PK_DEL="-automount -luci-app-accesscontrol -luci-app-adbyby-plus -luci-app-ddns -luci-app-filetransfer -luci-app-flowoffload -luci-app-ipsec-vpnd -luci-app-nlbwmon -luci-app-pptp-server -luci-app-ssr-plus -luci-app-vlmcsd -luci-app-vsftpd -luci-app-wol -luci-app-xlnetacc -luci-app-zerotier"
 
-# make image PACKAGES="${PK_ADD} ${PK_THEME} ${PK_VPN} ${PK_DEL} ${PK_DEL_FM}" FILES=../files/
-make image PROFILE="wndr3800" PACKAGES="${PK_ADD} ${PK_THEME} ${PK_DEL}"
+make image PROFILE="wndr3800" PACKAGES="${PK_ADD} ${PK_THEME} ${PK_DEL}" FILES=../files/wndr3800/
 
 cd ${IMG_BUILD_PATH}
 
