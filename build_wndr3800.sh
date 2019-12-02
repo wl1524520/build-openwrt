@@ -19,7 +19,26 @@ make image PROFILE="wndr3800" PACKAGES="${PK_ADD} ${PK_THEME} ${PK_DEL}" FILES=.
 cd ${IMG_BUILD_PATH}
 
 IMG_FILE_PATH="./${DIST_DEVICE_NAME}/bin/targets/ar71xx/generic"
+
+# copy sysupgrade file to home dir
 IMG_FILE_NAME='openwrt-ar71xx-generic-wndr3800-squashfs-sysupgrade.bin'
+IMG_PATHNAME=${IMG_FILE_PATH}/${IMG_FILE_NAME}
+if [ ! -f ${IMG_PATHNAME} ]; then
+    exit -1
+fi
+
+DEST_FILENAME=`date +%Y-%m-%d`-${IMG_FILE_NAME}
+
+if [ -f ${HOME}/${DEST_FILENAME} ]; then
+    echo "rm -rf ${HOME}/${DEST_FILENAME}"
+    rm -rf ${HOME}/${DEST_FILENAME}
+fi
+
+echo "cp ${IMG_PATHNAME} ${HOME}/${DEST_FILENAME}"
+cp ${IMG_PATHNAME} ${HOME}/${DEST_FILENAME}
+
+# copy factory image file to home dir
+IMG_FILE_NAME='openwrt-ar71xx-generic-wndr3800-squashfs-factory.img'
 IMG_PATHNAME=${IMG_FILE_PATH}/${IMG_FILE_NAME}
 if [ ! -f ${IMG_PATHNAME} ]; then
     exit -1
