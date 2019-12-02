@@ -1,9 +1,9 @@
 #!/bin/bash
 
 IMG_BUILD_PATH=$PWD
-DIST_DEVICE_NAME='openwrt-imagebuilder-x86-64.Linux-x86_64'
+DIST_DIR_NAME='openwrt-imagebuilder-x86-64.Linux-x86_64'
 
-cd ${IMG_BUILD_PATH}/${DIST_DEVICE_NAME}
+cd ${IMG_BUILD_PATH}/${DIST_DIR_NAME}
 
 cp ../smartdns/luci-app-smartdns.1.2019.11.02-1102.all-luci-all.ipk packages
 cp ../smartdns/smartdns.1.2019.11.02-1102.x86_64-openwrt-all.ipk packages
@@ -14,12 +14,11 @@ PK_ADD="luci-app-dnspod smartdns luci-app-smartdns luci-i18n-arpbind-zh-cn luci-
 PK_DEL=" -alsa-utils -automount -autosamba -block-mount -kmod-ac97 -kmod-ath10k -kmod-ath5k -kmod-ath9k -kmod-ath9k-htc -kmod-rt2800-usb -kmod-sound-hda-codec-realtek -kmod-sound-hda-codec-via -kmod-sound-hda-core -kmod-sound-via82xx -kmod-usb-audio -kmod-usb-net -kmod-usb-net-asix -kmod-usb-net-asix-ax88179 -kmod-usb-net-rtl8150 -kmod-usb-net-rtl8152 -luci-app-accesscontrol -luci-app-adbyby-plus -luci-app-ddns -ddns-scripts_aliyun -luci-app-filetransfer -luci-app-ipsec-vpnd -luci-app-pptp-server -luci-app-sfe -luci-app-transmission -luci-app-v2ray-server -luci-app-vlmcsd -luci-app-vsftpd -luci-app-xlnetacc -luci-app-zerotier -wpad"
 PK_DEL_FM="-ath10k-firmware-qca988x -ath10k-firmware-qca9888 -ath10k-firmware-qca9984"
 
-# make image PACKAGES="${PK_ADD} ${PK_THEME} ${PK_VPN} ${PK_DEL}"
-make image PACKAGES="${PK_ADD} ${PK_THEME} ${PK_VPN} ${PK_DEL} ${PK_DEL_FM}" FILES=../files/
+make image PACKAGES="${PK_ADD} ${PK_THEME} ${PK_VPN} ${PK_DEL} ${PK_DEL_FM}" FILES=../files/x86_64/
 
 cd ${IMG_BUILD_PATH}
 
-IMG_FILE_PATH="./${DIST_DEVICE_NAME}/bin/targets/x86/64"
+IMG_FILE_PATH="./${DIST_DIR_NAME}/bin/targets/x86/64"
 IMG_FILE_NAME='openwrt-x86-64-combined-squashfs.img'
 IMG_PATHNAME=${IMG_FILE_PATH}/${IMG_FILE_NAME}
 if [ ! -f ./${IMG_PATHNAME} ]; then
