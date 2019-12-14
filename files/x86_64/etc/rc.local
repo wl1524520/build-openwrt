@@ -2,7 +2,7 @@
 # the system init finished. By default this file does nothing.
 
 # start AdGuardHome
-#/opt/AdGuardHome/agh.sh
+/opt/AdGuardHome/agh.sh
 
 exit 0
 
