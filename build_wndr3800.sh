@@ -5,14 +5,11 @@ DIST_DEVICE_NAME='openwrt-imagebuilder-ar71xx-generic.Linux-x86_64'
 
 cd ${IMG_BUILD_PATH}/${DIST_DEVICE_NAME}
 
-cp ../smartdns/luci-app-smartdns.1.2019.11.02-1102.all-luci-all.ipk packages
-cp ../smartdns/smartdns.1.2019.11.02-1102.mips-openwrt-all.ipk packages
-
 PK_VPN="luci-app-openvpn-server luci-i18n-openvpn-server-zh-cn"
 PK_THEME="luci-theme-netgear"
 #PK_ADD="luci-app-dnspod luci-i18n-wol-zh-cn"
 PK_WPAD="wpad-basic -wpad-openssl"
-PK_LANG="luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn luci-i18n-arpbind-zh-cn luci-i18n-autoreboot-zh-cn luci-i18n-ramfree-zh-cn luci-i18n-upnp-zh-cn luci-i18n-sfe-zh-cn"
+PK_LANG="luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn luci-i18n-smartdns-zh-cn luci-i18n-arpbind-zh-cn luci-i18n-autoreboot-zh-cn luci-i18n-ramfree-zh-cn luci-i18n-upnp-zh-cn luci-i18n-sfe-zh-cn"
 PK_ADD="luci-mod-rpc smartdns luci-app-smartdns luci-app-firewall luci-app-frpc luci-app-sfe luci-app-ramfree luci-app-sqm luci-app-upnp luci-app-arpbind luci-app-autoreboot"
 PK_DEL="-automount -luci-app-accesscontrol -luci-app-adbyby-plus -luci-app-ddns -luci-app-filetransfer -luci-app-flowoffload -luci-app-ipsec-vpnd -luci-app-nlbwmon -luci-app-pptp-server -luci-app-ssr-plus -luci-app-vlmcsd -luci-app-vsftpd -luci-app-wol -luci-app-xlnetacc -luci-app-zerotier"
 

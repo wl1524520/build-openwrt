@@ -1,140 +1,121 @@
 
 config smartdns
-	option server_name 'smartdns'
-	option tcp_server '1'
-	option dualstack_ip_selection '0'
-	option redirect 'dnsmasq-upstream'
-	option rr_ttl_min '300'
-	option seconddns_tcp_server '1'
-	option seconddns_no_speed_check '0'
-	option seconddns_no_rule_addr '0'
-	option seconddns_no_rule_nameserver '0'
-	option seconddns_no_rule_ipset '0'
-	option seconddns_no_rule_soa '0'
-	option seconddns_no_dualstack_selection '0'
-	option seconddns_no_cache '0'
-	option coredump '0'
 	option enabled '0'
-	option ipv6_server '0'
-	option port '6053'
-	option seconddns_port '5335'
-	option cache_size '5000'
-	option prefetch_domain '1'
-	list old_redirect 'dnsmasq-upstream'
+	list old_redirect 'none'
 	list old_port '6053'
-	list old_enabled '1'
+	list old_enabled '0'
 
 config server
 	option type 'udp'
 	option port '53'
 	option name 'KMDNS1'
 	option ip '222.172.200.68'
-	option enabled '1'
+	option enabled '0'
 
 config server
 	option port '53'
 	option type 'tcp'
 	option name 'KMDNS1'
 	option ip '222.172.200.68'
-	option enabled '1'
+	option enabled '0'
 
 config server
 	option type 'udp'
 	option port '53'
 	option name 'KMDNS2'
 	option ip '61.166.150.123'
-	option enabled '1'
+	option enabled '0'
 
 config server
 	option port '53'
 	option type 'tcp'
 	option name 'KMDNS2'
 	option ip '61.166.150.123'
-	option enabled '1'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'udp'
 	option ip '114.114.114.114'
 	option port '53'
 	option name '114DNS'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'tcp'
 	option ip '114.114.114.114'
 	option port '53'
 	option name '114DNS'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'udp'
 	option ip '114.114.115.115'
 	option port '53'
 	option name '114DNS'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'tcp'
 	option ip '114.114.115.115'
 	option port '53'
 	option name '114DNS'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'udp'
 	option ip '223.5.5.5'
 	option port '53'
 	option name 'aliDNS'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'tcp'
 	option ip '223.5.5.5'
 	option port '53'
 	option name 'aliDNS'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'udp'
 	option ip '223.6.6.6'
 	option port '53'
 	option name 'aliDNS'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'tcp'
 	option ip '223.6.6.6'
 	option port '53'
 	option name 'aliDNS'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'udp'
 	option ip '119.29.29.29'
 	option port '53'
 	option name 'DNSPOD'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'tcp'
 	option ip '119.29.29.29'
 	option port '53'
 	option name 'DNSPOD'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'udp'
 	option ip '119.28.28.28'
 	option port '53'
 	option name 'DNSPOD'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option type 'tcp'
 	option ip '119.28.28.28'
 	option port '53'
 	option name 'DNSPOD'
+	option enabled '0'
 
 config server
 	option type 'udp'
@@ -165,16 +146,16 @@ config server
 	option enabled '0'
 
 config server
-	option enabled '1'
 	option name 'https'
 	option ip 'https://1.1.1.1/dns-query'
 	option type 'https'
 	option port '443'
+	option enabled '0'
 
 config server
-	option enabled '1'
 	option name 'https'
 	option ip 'https://1.0.0.1/dns-query'
 	option type 'https'
 	option port '443'
+	option enabled '0'
 
