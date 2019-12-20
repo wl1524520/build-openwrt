@@ -13,7 +13,7 @@ PK_LANG="luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn luci-i18n-smartdns-zh-cn 
 PK_ADD="luci-mod-rpc smartdns luci-app-smartdns luci-app-firewall luci-app-frpc luci-app-sfe luci-app-ramfree luci-app-sqm luci-app-upnp luci-app-arpbind luci-app-autoreboot"
 PK_DEL="-automount -luci-app-accesscontrol -luci-app-adbyby-plus -luci-app-ddns -luci-app-filetransfer -luci-app-flowoffload -luci-app-ipsec-vpnd -luci-app-nlbwmon -luci-app-pptp-server -luci-app-ssr-plus -luci-app-vlmcsd -luci-app-vsftpd -luci-app-wol -luci-app-xlnetacc -luci-app-zerotier"
 
-make image PROFILE="wndr3800" PACKAGES="${PK_ADD} ${PK_WPAD} ${PK_THEME} ${PK_DEL}" FILES=../files/wndr3800/
+make image PROFILE="wndr3800" PACKAGES="${PK_ADD} ${PK_LANG} ${PK_WPAD} ${PK_THEME} ${PK_DEL}" FILES=../files/wndr3800/
 
 cd ${IMG_BUILD_PATH}
 
