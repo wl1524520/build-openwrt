@@ -11,7 +11,7 @@ PK_THEME="luci-theme-netgear"
 PK_WPAD="-wpad-basic wpad-openssl"
 PK_LANG="luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn luci-i18n-smartdns-zh-cn luci-i18n-arpbind-zh-cn luci-i18n-autoreboot-zh-cn luci-i18n-ramfree-zh-cn luci-i18n-upnp-zh-cn luci-i18n-flowoffload-zh-cn"
 PK_ADD="luci-mod-rpc smartdns luci-app-smartdns luci-app-firewall luci-app-frpc luci-app-flowoffload luci-app-ramfree luci-app-sqm luci-app-upnp luci-app-arpbind luci-app-autoreboot bind-dig"
-PK_DEL="-automount -luci-app-accesscontrol -luci-app-adbyby-plus -luci-app-ddns -luci-app-filetransfer -luci-app-flowoffload -luci-app-ipsec-vpnd -luci-app-nlbwmon -luci-app-pptp-server -luci-app-ssr-plus -luci-app-vlmcsd -luci-app-vsftpd -luci-app-wol -luci-app-xlnetacc -luci-app-zerotier -block-mount -luci-app-sfe"
+PK_DEL="-automount -luci-app-accesscontrol -luci-app-adbyby-plus -luci-app-ddns -luci-app-filetransfer -luci-app-flowoffload -luci-app-ipsec-vpnd -luci-app-nlbwmon -luci-app-pptp-server -luci-app-ssr-plus -luci-app-vlmcsd -luci-app-vsftpd -luci-app-wol -luci-app-xlnetacc -luci-app-zerotier -block-mount -luci-app-sfe -opkg"
 
 make image PROFILE="netgear_r6220" PACKAGES="${PK_ADD} ${PK_LANG} ${PK_WPAD} ${PK_THEME} ${PK_DEL}" FILES=../files/wndr3800/
 
