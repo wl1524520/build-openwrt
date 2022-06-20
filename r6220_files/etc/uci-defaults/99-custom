@@ -1,0 +1,7 @@
+uci set wireless.@wifi-iface[0].ssid='R6220'
+uci set wireless.@wifi-iface[0].encryption='psk2'
+uci set wireless.@wifi-iface[0].key='12345678'
+uci set wireless.@wifi-iface[1].ssid='R6220-5G'
+uci set wireless.@wifi-iface[1].encryption='psk2'
+uci set wireless.@wifi-iface[1].key='12345678'
+uci commit wireless

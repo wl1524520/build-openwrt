@@ -1,0 +1,3 @@
+cat /etc/config/socat-opkg > /etc/config/socat
+uci set luci.main.mediaurlbase=/luci-static/darkmatter
+uci commit luci
