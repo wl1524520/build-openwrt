@@ -1,3 +1,3 @@
-cat /etc/config/socat-opkg > /etc/config/socat
+cat /etc/config/socat-opkg >> /etc/config/socat
 uci set luci.main.mediaurlbase=/luci-static/netgear
 uci commit luci
